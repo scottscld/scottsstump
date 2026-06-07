@@ -54,33 +54,27 @@
   const galleryItems = [
     {
       src: 'images/gallery-01.jpg',
-      fallbackClass: 'gallery-img--1',
-      caption: 'Stump Removal — Professional grinding below ground level'
+      caption: 'Before — Tree stumps ready for professional removal'
     },
     {
       src: 'images/gallery-02.jpg',
-      fallbackClass: 'gallery-img--2',
-      caption: 'Backyard Access — Compact equipment through standard gates'
+      caption: 'Stump Grinding — Professional equipment at work'
     },
     {
       src: 'images/gallery-03.jpg',
-      fallbackClass: 'gallery-img--3',
-      caption: 'Commercial Job — Large-scale stump removal'
+      caption: 'Commercial Job — Large-scale tree and stump removal'
     },
     {
       src: 'images/gallery-04.jpg',
-      fallbackClass: 'gallery-img--4',
       caption: 'Large Stump — No stump too big to handle'
     },
     {
       src: 'images/gallery-05.jpg',
-      fallbackClass: 'gallery-img--5',
-      caption: 'Clean Finish — Job site left tidy and ready for landscaping'
+      caption: 'After — Clean lawn left ready for landscaping'
     },
     {
       src: 'images/gallery-06.jpg',
-      fallbackClass: 'gallery-img--6',
-      caption: 'Multi-Stump Project — Efficient multi-stump removal'
+      caption: 'After — Yard cleared and ready to plant'
     }
   ];
 
@@ -190,18 +184,8 @@
     const item = galleryItems[currentGalleryIndex];
     if (!item) return;
 
-    /* Try to load actual image; fall back to CSS gradient class */
-    const img = new Image();
-    img.onload = function () {
-      lightboxImg.style.backgroundImage = 'url(' + item.src + ')';
-      lightboxImg.className = 'lightbox-img';
-    };
-    img.onerror = function () {
-      lightboxImg.style.backgroundImage = 'none';
-      lightboxImg.className = 'lightbox-img ' + item.fallbackClass;
-    };
-    img.src = item.src;
-
+    lightboxImg.style.backgroundImage = 'url(' + item.src + ')';
+    lightboxImg.className = 'lightbox-img';
     lightboxCaption.textContent = item.caption;
   }
 
