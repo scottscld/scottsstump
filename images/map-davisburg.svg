@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Map of Davisburg Michigan and surrounding Oakland County service area">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2e1f"/>
+      <stop offset="50%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#0d1a12"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="35%">
+      <stop offset="0%" stop-color="#40916c" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#40916c" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="100" x2="800" y2="100"/><line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/><line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="160" y1="0" x2="160" y2="500"/><line x1="320" y1="0" x2="320" y2="500"/>
+    <line x1="480" y1="0" x2="480" y2="500"/><line x1="640" y1="0" x2="640" y2="500"/>
+  </g>
+
+  <!-- Service area glow -->
+  <ellipse cx="400" cy="230" rx="220" ry="160" fill="url(#glow)"/>
+
+  <!-- Service radius rings -->
+  <circle cx="400" cy="230" r="170" fill="none" stroke="#40916c" stroke-opacity="0.15" stroke-width="1.5" stroke-dasharray="6 8"/>
+  <circle cx="400" cy="230" r="120" fill="none" stroke="#40916c" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <!-- Simplified county / land shape -->
+  <path d="M120,80 L680,60 L720,180 L700,380 L500,440 L200,420 L100,300 Z" fill="#1e3328" fill-opacity="0.6" stroke="#2d6a4f" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- Lakes -->
+  <ellipse cx="520" cy="195" rx="42" ry="28" fill="#1a3a4a" fill-opacity="0.7" stroke="#2a5a6a" stroke-opacity="0.4" stroke-width="1"/>
+  <ellipse cx="280" cy="310" rx="35" ry="22" fill="#1a3a4a" fill-opacity="0.5" stroke="#2a5a6a" stroke-opacity="0.3" stroke-width="1"/>
+  <ellipse cx="600" cy="320" rx="28" ry="18" fill="#1a3a4a" fill-opacity="0.4" stroke="#2a5a6a" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- Major roads -->
+  <g stroke="#ffffff" stroke-opacity="0.12" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M80,230 Q200,210 400,230 T720,240"/>
+    <path d="M400,60 Q410,150 400,230 T390,420"/>
+    <path d="M180,150 Q300,200 400,230 T620,300"/>
+    <path d="M250,380 Q350,300 400,230 T580,120"/>
+  </g>
+  <!-- Highway accent -->
+  <path d="M100,235 Q250,220 400,230 T700,245" fill="none" stroke="#40916c" stroke-opacity="0.2" stroke-width="3"/>
+
+  <!-- Nearby cities -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#a0a09a">
+    <circle cx="310" cy="130" r="4" fill="#5a5a55"/><text x="310" y="118" text-anchor="middle">Oxford</text>
+    <circle cx="260" cy="175" r="4" fill="#5a5a55"/><text x="260" y="163" text-anchor="middle">Holly</text>
+    <circle cx="540" cy="175" r="4" fill="#5a5a55"/><text x="540" y="163" text-anchor="middle">Lake Orion</text>
+    <circle cx="580" cy="250" r="4" fill="#5a5a55"/><text x="580" y="238" text-anchor="middle">Clarkston</text>
+    <circle cx="620" cy="310" r="4" fill="#5a5a55"/><text x="620" y="298" text-anchor="middle">Rochester</text>
+    <circle cx="350" cy="340" r="4" fill="#5a5a55"/><text x="350" y="358" text-anchor="middle">Waterford</text>
+    <circle cx="430" cy="370" r="4" fill="#5a5a55"/><text x="430" y="388" text-anchor="middle">Pontiac</text>
+    <circle cx="220" cy="300" r="4" fill="#5a5a55"/><text x="220" y="288" text-anchor="middle">Milford</text>
+    <circle cx="180" cy="240" r="4" fill="#5a5a55"/><text x="180" y="228" text-anchor="middle">South Lyon</text>
+    <circle cx="500" cy="340" r="4" fill="#5a5a55"/><text x="500" y="358" text-anchor="middle">Auburn Hills</text>
+  </g>
+
+  <!-- Davisburg pin -->
+  <g filter="url(#softGlow)">
+    <circle cx="400" cy="230" r="18" fill="#40916c" fill-opacity="0.3"/>
+    <circle cx="400" cy="230" r="8" fill="#40916c"/>
+    <circle cx="400" cy="230" r="3" fill="#f5f5f0"/>
+    <!-- Pin marker -->
+    <path d="M400,208 C393,208 388,214 388,221 C388,230 400,245 400,245 C400,245 412,230 412,221 C412,214 407,208 400,208Z" fill="#2d6a4f" stroke="#f5f5f0" stroke-width="1.5"/>
+    <circle cx="400" cy="221" r="3" fill="#f5f5f0"/>
+  </g>
+
+  <!-- Davisburg label -->
+  <text x="400" y="275" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#f5f5f0" letter-spacing="0.08em">DAVISBURG, MI</text>
+  <text x="400" y="293" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#40916c" letter-spacing="0.06em">OAKLAND COUNTY</text>
+
+  <!-- Compass -->
+  <g transform="translate(720, 60)" opacity="0.5">
+    <circle r="20" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1"/>
+    <text y="-6" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#f5f5f0">N</text>
+    <polygon points="0,-14 -4,-2 4,-2" fill="#40916c"/>
+  </g>
+
+  <!-- Scale bar -->
+  <g transform="translate(60, 440)" opacity="0.4">
+    <line x1="0" y1="0" x2="80" y2="0" stroke="#f5f5f0" stroke-width="2"/>
+    <line x1="0" y1="-4" x2="0" y2="4" stroke="#f5f5f0" stroke-width="1.5"/>
+    <line x1="80" y1="-4" x2="80" y2="4" stroke="#f5f5f0" stroke-width="1.5"/>
+    <text x="40" y="16" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a0a09a">~15 mi</text>
+  </g>
+</svg>
