@@ -54,27 +54,27 @@
   const galleryItems = [
     {
       src: 'images/gallery-01.jpg',
-      caption: 'Before — Tree stumps ready for professional removal'
+      caption: 'Before — Ann Arbor job with stumps ready for removal'
     },
     {
       src: 'images/gallery-02.jpg',
-      caption: 'Stump Grinding — Professional equipment at work'
+      caption: 'During — Stump grinding in progress, Ann Arbor'
     },
     {
       src: 'images/gallery-03.jpg',
-      caption: 'Commercial Job — Large-scale tree and stump removal'
+      caption: 'During — Rayco grinder at work, Davisburg'
     },
     {
       src: 'images/gallery-04.jpg',
-      caption: 'Large Stump — No stump too big to handle'
+      caption: 'After — Stump removed, Davisburg backyard'
     },
     {
       src: 'images/gallery-05.jpg',
-      caption: 'After — Clean lawn left ready for landscaping'
+      caption: 'Tight Access — Grinder fits through narrow side yard, Clinton Township'
     },
     {
       src: 'images/gallery-06.jpg',
-      caption: 'After — Yard cleared and ready to plant'
+      caption: 'Large Stump — Oak stump in Fenton, Michigan'
     }
   ];
 
