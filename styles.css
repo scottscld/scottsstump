@@ -1332,10 +1332,6 @@ button {
     animation: none;
   }
 
-  .area-pin {
-    animation: none;
-  }
-
   *,
   *::before,
   *::after {
