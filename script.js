@@ -11,9 +11,9 @@
      https://www.emailjs.com/docs/tutorial/overview/
      ============================================================ */
   const EMAILJS_CONFIG = {
-    publicKey: 'YOUR_PUBLIC_KEY',       // Account → API Keys → Public Key
-    serviceId: 'YOUR_SERVICE_ID',     // Email Services → Service ID
-    templateId: 'YOUR_TEMPLATE_ID'    // Email Templates → Template ID
+    publicKey: '0Zs53-XPJpSTp8vzv',       // Account → API Keys → Public Key
+    serviceId: 'service_p15w4y7',     // Email Services → Service ID
+    templateId: 'template_7p2j60s'    // Email Templates → Template ID
   };
 
   /* Template variables sent to EmailJS (must match your template):
