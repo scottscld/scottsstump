@@ -443,7 +443,8 @@
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.textContent = label;
-      btn.addEventListener('click', function () {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
         clearQuickReplies();
         appendChatMessage('user', label);
         onSelect(label);
@@ -586,7 +587,8 @@
       const sendBtn = document.createElement('button');
       sendBtn.className = 'chat-send-btn';
       sendBtn.textContent = 'Yes — send to Scott';
-      sendBtn.addEventListener('click', function () {
+      sendBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
         actions.remove();
         sendChatLead();
       });
@@ -594,7 +596,8 @@
       const cancelBtn = document.createElement('button');
       cancelBtn.className = 'chat-secondary-btn';
       cancelBtn.textContent = 'Use full form instead';
-      cancelBtn.addEventListener('click', function () {
+      cancelBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
         closeChat();
         // scroll to quote section
         const quote = document.getElementById('quote');
@@ -678,14 +681,16 @@
     const callBtn = document.createElement('button');
     callBtn.className = 'chat-send-btn';
     callBtn.textContent = 'Call (313) 570-0352';
-    callBtn.addEventListener('click', function () {
+    callBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
       window.location.href = 'tel:+13135700352';
     });
 
     const doneBtn = document.createElement('button');
     doneBtn.className = 'chat-secondary-btn';
     doneBtn.textContent = hadError ? 'Close' : 'Done';
-    doneBtn.addEventListener('click', function () {
+    doneBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
       closeChat();
     });
 
@@ -780,7 +785,8 @@
     chatClose.addEventListener('click', closeChat);
   }
   if (chatSend) {
-    chatSend.addEventListener('click', function () {
+    chatSend.addEventListener('click', function (e) {
+      e.stopPropagation();
       sendCurrentChatInput();
     });
   }
@@ -825,6 +831,16 @@
         // let the href scroll happen, then close
         setTimeout(closeChat, 50);
       });
+    });
+  }
+
+  // Prevent any clicks that originate inside the chat panel (including quick-reply buttons
+  // and action buttons that clear their own containers) from reaching the document-level
+  // "click outside to close" handler. This fixes the bug where selecting a quick option
+  // would immediately close the panel on desktop.
+  if (chatPanel) {
+    chatPanel.addEventListener('click', function (e) {
+      e.stopPropagation();
     });
   }
 
