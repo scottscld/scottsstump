@@ -613,6 +613,42 @@
     <a href="#quote" class="mobile-cta-quote">Free Quote</a>
   </div>
 
+  <!-- ============================================================
+       FLOATING CHATBOT — Quick lead capture (short on-brand interactions)
+       Sends collected info to owner via EmailJS (reuses quote template)
+       ============================================================ -->
+  <button class="chat-fab" id="chatFab" aria-label="Open quick quote chat" aria-expanded="false">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+    </svg>
+  </button>
+
+  <div class="chat-panel" id="chatPanel" aria-hidden="true">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <span class="chat-avatar" aria-hidden="true">S</span>
+        <div class="chat-header-text">
+          <strong>Scott's Stump Grinding</strong>
+          <span class="chat-status">Quick quote • Direct to Scott</span>
+        </div>
+      </div>
+      <button class="chat-close" id="chatClose" aria-label="Close chat">×</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages" role="log" aria-live="polite"></div>
+
+    <div class="chat-quick-replies" id="chatQuickReplies" aria-label="Quick replies"></div>
+
+    <div class="chat-input-area" id="chatInputArea">
+      <input type="text" id="chatInput" placeholder="Type your answer..." autocomplete="off" aria-label="Chat reply">
+      <button id="chatSend" aria-label="Send message">Send</button>
+    </div>
+
+    <div class="chat-footer">
+      Your details go straight to Scott. <a href="#quote">Use full form</a>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
